@@ -22,12 +22,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         randomCharacterEditText = findViewById(R.id.editText_randomCharacter);
-        serviceIntent = new Intent(this, RandomCharacterService.class); //ServiceRandomizer
+        randomCharacterEditText.setCursorVisible(false);
+        randomCharacterEditText.setFocusable(false);
+        randomCharacterEditText.setFocusableInTouchMode(false);
 
-        // ✅ Регистрируем без флага, подходит для Android < 13
-        broadcastReceiver = new MyBroadcastReceiver();
-        IntentFilter filter = new IntentFilter("my.custom.action.tag.lab6");
-        registerReceiver(broadcastReceiver, filter);
+        serviceIntent = new Intent(getApplicationContext(), ServiceRandomizer.class);
 
         Button startButton = findViewById(R.id.button_start);
         Button stopButton = findViewById(R.id.button_stop);
@@ -38,7 +37,20 @@ public class MainActivity extends AppCompatActivity {
             stopService(serviceIntent);
             randomCharacterEditText.setText("");
         });
-        nextButton.setOnClickListener(v -> startActivity(new Intent(this, SecondActivity.class)));
+        nextButton.setOnClickListener(v -> {
+            stopService(serviceIntent); // Остановим сервис при переходе
+            startActivity(new Intent(this, SecondActivity.class));
+        });
+
+        broadcastReceiver = new MyBroadcastReceiver();
+        IntentFilter intentFilter = new IntentFilter("my.custom.action.tag.lab6");
+        registerReceiver(broadcastReceiver, intentFilter);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        stopService(serviceIntent); // Остановим сервис при сворачивании
     }
 
     @Override
