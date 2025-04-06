@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
             stopService(serviceIntent);
             randomCharacterEditText.setText("");
         });
-        nextButton.setOnClickListener(v -> startActivity(new Intent(this, MainActivity2.class))); //SecondActivity
+        nextButton.setOnClickListener(v -> startActivity(new Intent(this, SecondActivity.class)));
     }
 
     @Override
