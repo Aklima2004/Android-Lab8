@@ -5,38 +5,45 @@
     android:padding="24dp"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="#F3E5F5">
+    android:background="@drawable/page2">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Lab 6 - Foreground Service"
-        android:textSize="20sp"
+        android:textSize="23sp"
         android:textStyle="bold"
         android:layout_gravity="center_horizontal"
-        android:paddingBottom="16dp" />
+        android:layout_marginTop="-130dp"
+        android:textColor="#7E1439"/>
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:id="@+id/button_start"
         android:text="Start Music"
         android:onClick="startService"
-        android:layout_marginTop="12dp" />
+        android:layout_marginTop="60dp"
+        android:backgroundTint="#609DF2"
+        android:textSize="17sp" />
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:id="@+id/button_stop"
         android:text="Stop Music"
         android:onClick="stopService"
-        android:layout_marginTop="12dp" />
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#609DF2"
+        android:textSize="17sp" />
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:id="@+id/button_back"
         android:text="Back to Main"
         android:onClick="backToMain"
-        android:layout_marginTop="12dp" />
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#3F51B5"
+        android:textSize="17sp" />
 </LinearLayout>

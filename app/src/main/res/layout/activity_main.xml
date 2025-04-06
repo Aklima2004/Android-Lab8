@@ -2,41 +2,67 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center_horizontal"
     android:padding="24dp"
-    android:background="#FFFFFF">
+    android:background="@drawable/page1">
 
     <TextView
         android:text="Lab6 - Background Service"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         android:layout_gravity="center_horizontal"
-        android:paddingBottom="10dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="25dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="#7E1439"/>
 
+    <!-- Центрированное большое поле для отображения буквы -->
     <EditText
         android:id="@+id/editText_randomCharacter"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
         android:gravity="center"
+        android:textSize="26sp"
+        android:textColor="#7E1439"
         android:hint="Random Character"
-        android:enabled="false" />
+        android:textColorHint="#888888"
+        android:background="@android:drawable/edit_text"
+        android:enabled="false"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        />
 
+    <!-- Кнопки -->
     <Button
         android:id="@+id/button_start"
         android:text="Start"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:textSize="17sp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="20dp"
+        android:backgroundTint="#FB5E85"/>
 
     <Button
         android:id="@+id/button_stop"
         android:text="Stop"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:textSize="17sp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="20dp"
+        android:backgroundTint="#FB5E85"/>
 
     <Button
         android:id="@+id/button_next"
         android:text="Next Activity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:textSize="17sp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:backgroundTint="#9C27B0"/>
+
 </LinearLayout>
