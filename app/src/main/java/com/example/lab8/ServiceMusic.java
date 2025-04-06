@@ -24,7 +24,7 @@ public class ServiceMusic extends Service {
 
         player.setOnPreparedListener(mp -> {
             mp.setLooping(true);
-            mp.setVolume(3.5f, 3.5f);// Зациклить
+            mp.setVolume(5.5f, 5.5f);// Зациклить
             mp.start();          // Запустить
         });
 
