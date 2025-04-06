@@ -13,10 +13,10 @@ public class SecondActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2); //activity_second
+        setContentView(R.layout.activity_second);
 
         // Инициализация Intent для ForegroundService
-        serviceIntent = new Intent(this, MyService.class); //ServiceMusic
+        serviceIntent = new Intent(this, ServiceMusic.class);
     }
 
     // Запуск сервиса (Foreground Service)
